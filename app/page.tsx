@@ -4,6 +4,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { ProductsSection } from "@/components/ProductsSection";
 import { FAQSection } from "@/components/FAQSection";
 import { RealStoriesSection } from "@/components/RealStoriesSection";
+import { WhyChooseSection } from "@/components/WhyChooseSection";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Header />
       <HeroSection />
       <ProductsSection />
+      <WhyChooseSection />
       <RealStoriesSection />
       <FAQSection />
       <FloatingContactButtons />

@@ -4,9 +4,9 @@ import { Logo } from "./Logo";
 const menuItems = [
   { label: "Về chúng tôi", href: "#contact" },
   { label: "Sản phẩm", href: "#products" },
-  { label: "Vì sao chọn Viethealth", href: "#contact" },
+  { label: "Vì sao chọn VietHealth", href: "#why-choose", active: true },
   { label: "Câu chuyện người thật", href: "#real-stories" },
-  { label: "Giải đáp thắc mắc", href: "#faq", active: true },
+  { label: "Giải đáp thắc mắc", href: "#faq" },
   { label: "Liên hệ", href: "#contact" },
 ];
 
