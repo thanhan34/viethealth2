@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-viet-navy: #003f52;
+  --color-viet-deep: #064b5f;
+  --color-viet-teal: #007a8a;
+  --color-viet-cyan: #38bfd1;
+  --color-viet-pale: #f3fafc;
+  --color-viet-text: #073b4c;
+  --color-viet-muted: #5f6f78;
+  --color-viet-border: #ddeff3;
+  --shadow-soft: 0 18px 48px rgba(6, 75, 95, 0.11);
+  --shadow-button: 0 12px 24px rgba(0, 63, 82, 0.22);
+  --radius-card: 20px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: #f3fafc;
+  color: var(--color-viet-text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  text-rendering: geometricPrecision;
+}
+a { color: inherit; text-decoration: none; }
+
+@layer components {
+  .container-viet { @apply mx-auto w-full max-w-[1320px] px-4 md:px-12; }
+  .btn-base { @apply inline-flex min-h-11 items-center justify-center gap-2.5 rounded-[10px] font-bold transition duration-200 ease-out focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-viet-cyan/30 active:translate-y-0.5 disabled:pointer-events-none disabled:opacity-60; }
+  .btn-primary { @apply btn-base bg-primary-gradient text-white shadow-button hover:-translate-y-0.5 hover:shadow-float; }
+  .btn-secondary { @apply btn-base border border-viet-teal/75 bg-white text-viet-deep shadow-[0_10px_26px_rgba(0,122,138,0.08)] hover:-translate-y-0.5 hover:border-viet-teal hover:shadow-soft; }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+@media (max-width: 767px) {
+  body { background: #f4fbfd; }
+}
