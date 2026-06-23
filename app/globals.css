@@ -4,12 +4,16 @@
 
 :root {
   --color-viet-navy: #003f52;
+  --color-viet-footer: #002f3d;
+  --color-viet-midnight: #002733;
   --color-viet-deep: #064b5f;
   --color-viet-teal: #007a8a;
   --color-viet-cyan: #38bfd1;
+  --color-viet-ice: #7edfea;
   --color-viet-pale: #f3fafc;
   --color-viet-text: #073b4c;
   --color-viet-muted: #5f6f78;
+  --color-viet-muted-dark: #a9c8d0;
   --color-viet-border: #ddeff3;
   --shadow-soft: 0 18px 48px rgba(6, 75, 95, 0.11);
   --shadow-button: 0 12px 24px rgba(0, 63, 82, 0.22);

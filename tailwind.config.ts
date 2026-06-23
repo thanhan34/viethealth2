@@ -7,12 +7,16 @@ const config: Config = {
       colors: {
         viet: {
           navy: "#003F52",
+          footer: "#002F3D",
+          midnight: "#002733",
           deep: "#064B5F",
           teal: "#007A8A",
           cyan: "#38BFD1",
+          ice: "#7EDFEA",
           pale: "#F3FAFC",
           text: "#073B4C",
           muted: "#5F6F78",
+          mutedDark: "#A9C8D0",
           border: "#DDEFF3",
           zalo: "#1478F2",
           messenger: "#3447B7",

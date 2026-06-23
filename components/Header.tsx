@@ -1,16 +1,21 @@
+"use client";
+
 import { Calendar, Menu, Phone } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { Logo } from "./Logo";
 
 const menuItems = [
-  { label: "Về chúng tôi", href: "#contact" },
-  { label: "Sản phẩm", href: "#products" },
-  { label: "Vì sao chọn VietHealth", href: "#why-choose", active: true },
-  { label: "Câu chuyện người thật", href: "#real-stories" },
-  { label: "Giải đáp thắc mắc", href: "#faq" },
+  { label: "Về chúng tôi", href: "/#contact" },
+  { label: "Sản phẩm", href: "/san-pham" },
+  { label: "Vì sao chọn VietHealth", href: "/#why-choose" },
+  { label: "Câu chuyện người thật", href: "/#real-stories" },
+  { label: "Giải đáp thắc mắc", href: "/#faq" },
   { label: "Liên hệ", href: "#contact" },
 ];
 
 export function Header() {
+  const pathname = usePathname();
+
   return (
     <header className="fixed inset-x-0 top-0 z-50 h-14 bg-white/96 shadow-header backdrop-blur md:h-[86px]">
       <div className="mx-auto flex h-full w-full max-w-[1500px] items-center justify-between px-4 md:px-12">
@@ -23,7 +28,7 @@ export function Header() {
               key={item.label}
               href={item.href}
               className={`relative whitespace-nowrap transition hover:text-viet-teal ${
-                item.active
+                item.href === "/san-pham" && pathname?.startsWith("/san-pham")
                   ? "text-viet-teal after:absolute after:left-1/2 after:top-[42px] after:h-[3px] after:w-[74px] after:-translate-x-1/2 after:rounded-full after:bg-viet-cyan"
                   : ""
               }`}

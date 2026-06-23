@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { StaticImageData } from "next/image";
 import {
   Activity,
@@ -19,6 +20,7 @@ import sp5 from "@/images/sanpham/sp5.png";
 import sp6 from "@/images/sanpham/sp6.png";
 
 type Product = {
+  href: string;
   title: string;
   mobileTitle?: string;
   description: string;
@@ -30,6 +32,7 @@ type Product = {
 
 const products: Product[] = [
   {
+    href: "/san-pham#chan-duoi",
     title: "Chân giả dưới gối",
     mobileTitle: "Chân giả\ndưới gối",
     description: "Dành cho người mất chi dưới gối.",
@@ -38,6 +41,7 @@ const products: Product[] = [
     imageAlt: "Chân giả dưới gối VietHealth",
   },
   {
+    href: "/san-pham#chan-tren",
     title: "Chân giả trên gối",
     mobileTitle: "Chân giả\ntrên gối",
     description: "Dành cho người mất chi trên gối.",
@@ -46,6 +50,7 @@ const products: Product[] = [
     imageAlt: "Chân giả trên gối VietHealth",
   },
   {
+    href: "/san-pham#tay-gia",
     title: "Tay giả",
     description: "Đa dạng mẫu mã, chức năng linh hoạt.",
     icon: Hand,
@@ -53,6 +58,7 @@ const products: Product[] = [
     imageAlt: "Tay giả chức năng VietHealth",
   },
   {
+    href: "/san-pham#nep-chinh-hinh",
     title: "Nẹp chỉnh hình",
     mobileTitle: "Nẹp\nchỉnh hình",
     description: "Hỗ trợ điều trị cong vẹo, thoái hoá cột sống, thoát vị đĩa đệm.",
@@ -61,6 +67,7 @@ const products: Product[] = [
     imageAlt: "Nẹp chỉnh hình cột sống VietHealth",
   },
   {
+    href: "/san-pham#nep-chinh-hinh",
     title: "Nẹp chi",
     description: "Hỗ trợ cố định và phục hồi chi trên, chi dưới.",
     icon: Bone,
@@ -68,6 +75,7 @@ const products: Product[] = [
     imageAlt: "Nẹp chi chỉnh hình VietHealth",
   },
   {
+    href: "#contact",
     title: "Sửa chữa & bảo trì",
     mobileTitle: "Sửa chữa &\nbảo trì",
     description: "Kiểm tra, sửa chữa và bảo dưỡng định kỳ thiết bị chỉnh hình.",
@@ -114,14 +122,14 @@ function ProductCard({ product }: { product: Product }) {
             {product.description}
           </p>
 
-          <a
-            href="#products"
+          <Link
+            href={product.href}
             aria-label={`Xem chi tiết ${product.title}`}
             className="mt-auto inline-flex h-7 w-7 items-center justify-center rounded-full border border-viet-border bg-white text-viet-teal transition hover:border-viet-teal/50 hover:bg-viet-pale focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-viet-cyan/25 md:h-auto md:w-auto md:justify-start md:gap-1.5 md:border-0 md:bg-transparent md:text-[15px] md:font-extrabold md:text-[#006A7A] md:hover:bg-transparent"
           >
             <span className="hidden md:inline">Xem chi tiết</span>
             <ArrowRight className="h-3.5 w-3.5 md:h-4 md:w-4 transition-transform group-hover:translate-x-0.5" strokeWidth={2.2} />
-          </a>
+          </Link>
         </div>
       </div>
     </article>
@@ -166,7 +174,7 @@ export function ProductsSection() {
 
         <div className="mt-3.5 flex md:mt-8 md:justify-center">
           <a
-            href="#products"
+            href="/san-pham"
             className="inline-flex h-11 w-full items-center justify-between rounded-[10px] border border-viet-teal/45 bg-white px-4 text-[13px] font-extrabold text-viet-text shadow-[0_8px_22px_rgba(6,75,95,0.04)] transition duration-200 hover:-translate-y-0.5 hover:border-viet-teal hover:bg-viet-pale focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-viet-cyan/25 active:translate-y-0.5 md:h-14 md:w-auto md:justify-center md:gap-5 md:rounded-xl md:px-7 md:text-[15.5px]"
           >
             <Grid2X2 className="h-4 w-4 text-viet-teal md:h-5 md:w-5" strokeWidth={1.9} />
